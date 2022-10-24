@@ -14,4 +14,5 @@ The list below is the contents of this quickstart page:
 .. toctree::
     :maxdepth: 4
 
+    installation/index
     quickstart/index
