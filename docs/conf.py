@@ -61,12 +61,4 @@ rst_epilog = """
     os.environ.get("GIT_HASH", "main"),
     os.environ.get("GIT_HASH", "master"))
 
-if 'html_theme' not in globals():
-    try:
-        import insipid_sphinx_theme
-    except ImportError:
-        pass
-    else:
-        html_theme = 'insipid'
-        html_copy_source = False
-        html_permalinks_icon = '#'
+html_theme = 'pydata_sphinx_theme'
