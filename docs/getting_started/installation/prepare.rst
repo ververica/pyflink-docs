@@ -124,16 +124,6 @@ PyFlink could be installed using `PyPI <https://pypi.org/project/apache-flink/>`
     python3 -m pip install apache-flink
 
 
-Installing using Conda
-~~~~~~~~~~~~~~~~~~~~~~
-
-PyFlink could be installed using Conda as following:
-
-.. code-block:: bash
-
-    python3 -m pip install apache-flink
-
-
 Installing from Source
 ~~~~~~~~~~~~~~~~~~~~~~
 
