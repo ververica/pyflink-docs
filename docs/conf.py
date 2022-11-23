@@ -30,8 +30,8 @@ master_doc = 'index'
 project = 'pyflink-docs'
 author = 'PyFlink'
 copyright = ''
-flink_doc_version = "master"
-release = 'main'
+flink_doc_version = "release-1.15"
+release = 'release-1.15'
 html_show_copyright = False
 
 html_title = project + ' version ' + flink_doc_version
@@ -52,7 +52,7 @@ rst_epilog = """
 
 .. |api_reference| replace:: :raw-html:`<meta http-equiv="refresh" content="0;URL='https://nightlies.apache.org/flink/flink-docs-{1}/api/python/index.html' " />`
 """.format(
-    os.environ.get("GIT_HASH", "main"),
+    os.environ.get("GIT_HASH", release),
     flink_doc_version)
 
 html_theme = 'pydata_sphinx_theme'
