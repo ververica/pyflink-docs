@@ -1,0 +1,14 @@
+[
+  {
+    "version": "main",
+    "url": "https://pyflink.readthedocs.io/en/main/getting_started/"
+  },
+  {
+    "version": "release-1.16",
+    "url": "https://pyflink.readthedocs.io/en/release-1.16/getting_started/"
+  },
+  {
+    "version": "release-1.15",
+    "url": "https://pyflink.readthedocs.io/en/release-1.15/getting_started/"
+  }
+]
