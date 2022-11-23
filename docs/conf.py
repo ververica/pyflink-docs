@@ -30,7 +30,7 @@ master_doc = 'index'
 project = 'pyflink-docs'
 author = 'PyFlink'
 copyright = ''
-flink_doc_version = "master"
+flink_doc_version = "release-1.16"
 html_show_copyright = False
 
 html_title = project + ' version ' + flink_doc_version
