@@ -52,7 +52,7 @@ rst_epilog = """
 
 .. |api_reference| replace:: :raw-html:`<meta http-equiv="refresh" content="0;URL='https://nightlies.apache.org/flink/flink-docs-{1}/api/python/index.html' " />`
 """.format(
-    os.environ.get("GIT_HASH", "main"),
+    os.environ.get("GIT_HASH", release),
     flink_doc_version)
 
 html_theme = 'pydata_sphinx_theme'
