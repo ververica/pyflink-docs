@@ -30,21 +30,10 @@ master_doc = 'index'
 project = 'pyflink-docs'
 author = 'PyFlink'
 copyright = ''
-version_file = os.path.join("..", 'src/version.py')
-try:
-    exec(open(version_file).read())
-except IOError:
-    print("Failed to load PyFlink Docs version file for packaging. " +
-          "'%s' not found!" % version_file,
-          file=sys.stderr)
-    sys.exit(-1)
-# The short X.Y version
-version = __version__  # noqa
-# The full version, including alpha/beta/rc tags
-release = os.environ.get('RELEASE_VERSION', version)
+flink_doc_version = "master"
 html_show_copyright = False
 
-html_title = project + ' version ' + version
+html_title = project + ' version ' + flink_doc_version
 
 # Links used globally in the RST files.
 # These are defined here to allow link substitutions dynamically.
@@ -57,8 +46,12 @@ rst_epilog = """
 .. _binder_datastream: https://mybinder.org/v2/gh/ververica/pyflink-docs/{0}?filepath=docs%2Fgetting_started%2Fquickstart%2Fdatastream_api.ipynb
 .. |examples| replace:: Examples
 .. _examples: https://github.com/apache/flink/tree/{1}/flink-python/pyflink/examples
+.. role:: raw-html(raw)
+   :format: html
+
+.. |api_reference| replace:: :raw-html:`<meta http-equiv="refresh" content="0;URL='https://nightlies.apache.org/flink/flink-docs-{1}/api/python/index.html' " />`
 """.format(
     os.environ.get("GIT_HASH", "main"),
-    os.environ.get("GIT_HASH", "master"))
+    flink_doc_version)
 
 html_theme = 'pydata_sphinx_theme'

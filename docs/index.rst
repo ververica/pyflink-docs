@@ -7,3 +7,4 @@
     getting_started/index
     user_guide/index
     faq
+    api
