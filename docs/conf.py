@@ -31,6 +31,7 @@ project = 'pyflink-docs'
 author = 'PyFlink'
 copyright = ''
 flink_doc_version = "release-1.16"
+release = 'release-1.16'
 html_show_copyright = False
 
 html_title = project + ' version ' + flink_doc_version
@@ -55,3 +56,13 @@ rst_epilog = """
     flink_doc_version)
 
 html_theme = 'pydata_sphinx_theme'
+
+html_static_path = ['_static']
+
+html_theme_options = {
+    "switcher": {
+        "json_url": "https://pyflink.readthedocs.io/en/main/_static/switcher.json",
+        "version_match": release,
+    },
+    "navbar_end": ["version-switcher"]
+}
