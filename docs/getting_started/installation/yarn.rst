@@ -49,7 +49,8 @@ virtual environments to use.
           -Dyarn.application.name=<ApplicationName> \
           -pyclientexec /path/to/venv/bin/python3 \
           -pyexec /path/to/venv/bin/python3 \
-          -py word_count.py
+          -pyfs shipfiles \
+          -pym word_count
 
 In the above example, it assumes that there is already a Python virtual environment available at /path/to/venv on all
 the cluster nodes. It should be noted that options **-pyclientexec** and **-pyexec** are also
@@ -73,7 +74,8 @@ nodes or when there are some special requirements where the pre-installed Python
           -pyarch shipfiles/venv.zip \
           -pyclientexec venv.zip/venv/bin/python3 \
           -pyexec venv.zip/venv/bin/python3 \
-          -py shipfiles/word_count.py
+          -pyfs shipfiles \
+          -pym word_count
 
 In the above example, the Python virtual environment is specified via option **-pyarch**. It will be distributed to
 the cluster nodes during job execution. It should be noted that options **-pyclientexec** and **-pyexec** are also
@@ -114,7 +116,8 @@ You could execute PyFlink jobs in application mode as following:
           -pyarch shipfiles/venv.zip \
           -pyclientexec venv.zip/venv/bin/python3 \
           -pyexec venv.zip/venv/bin/python3 \
-          -py shipfiles/word_count.py
+          -pyfs shipfiles \
+          -pym word_count
 
 You could execute PyFlink jobs in per-job mode as following:
 
@@ -128,7 +131,8 @@ You could execute PyFlink jobs in per-job mode as following:
           -pyarch shipfiles/venv.zip \
           -pyclientexec /path/to/venv/bin/python3 \
           -pyexec venv.zip/venv/bin/python3 \
-          -py shipfiles/word_count.py
+          -pyfs /path/to/shipfiles \
+          -pym word_count
 
 .. note::
     Per-Job mode has been deprecated since Flink 1.15 and may be dropped in the future releases. It's suggested to use
@@ -150,7 +154,8 @@ You could also execute PyFlink jobs in session mode as following:
               -pyarch shipfiles/venv.zip \
               -pyclientexec /path/to/venv/bin/python3 \
               -pyexec venv.zip/venv/bin/python3 \
-              -py shipfiles/word_count.py
+              -pyfs /path/to/shipfiles \
+              -pym word_count
 
 See `Session Mode <https://nightlies.apache.org/flink/flink-docs-stable/docs/deployment/resource-providers/yarn/#session-mode>`_ for more details.
 
